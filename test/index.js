@@ -10,7 +10,8 @@ lab.test('pass data', function (done) {
       log: function (level, data) {
         expect(data.msg).to.equal('hi');
         done();
-      }
+      },
+      level: function () {}
     }
   });
   reporter.start(ee, function (err) {
@@ -29,7 +30,8 @@ lab.test('tag with level', function (done) {
         expect(level).to.equal('notice');
         done();
       },
-      levels: {warning: 3, notice: 2}
+      levels: {warning: 3, notice: 2},
+      level: function () {}
     }
   });
   reporter.start(ee, function (err) {
@@ -47,7 +49,8 @@ lab.test('tag with non-level', function (done) {
       log: function (level, data) {
         expect(level).to.equal('info');
         done();
-      }
+      },
+      level: function () {}
     }
   });
   reporter.start(ee, function (err) {
@@ -65,7 +68,8 @@ lab.test('request no tags', function (done) {
       log: function (level, data) {
         expect(level).to.equal('info');
         done();
-      }
+      },
+      level: function () {}
     }
   });
   reporter.start(ee, function (err) {
@@ -80,7 +84,8 @@ lab.test('stop', function (done) {
     logger: {
       end: function () {
         done();
-      }
+      },
+      level: function () {}
     }
   });
   reporter.start(ee, function (err) {
@@ -96,7 +101,8 @@ lab.test('transform', function (done) {
       log: function (level, data) {
         expect(data.extra).to.equal('extra');
         done();
-      }
+      },
+      level: function () {}
     },
     transform: function (event, data) {
       expect(event).to.equal('request');
