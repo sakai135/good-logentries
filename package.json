@@ -1,7 +1,8 @@
 {
   "name": "good-le",
   "version": "0.0.1",
-  "description": "",
+  "description": "Good reporter for Logentries",
+  "keywords": ["hapi", "logentries", "good"],
   "main": "index.js",
   "scripts": {
     "test": "lab -v -p -t 100",
