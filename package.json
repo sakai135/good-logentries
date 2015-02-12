@@ -2,7 +2,11 @@
   "name": "good-le",
   "version": "0.0.1",
   "description": "Good reporter for Logentries",
-  "keywords": ["hapi", "logentries", "good"],
+  "keywords": [
+    "hapi",
+    "logentries",
+    "good"
+  ],
   "main": "index.js",
   "scripts": {
     "test": "lab -v -p -t 100",
@@ -22,7 +26,7 @@
   "dependencies": {
     "good-reporter": "^3.0.1",
     "le_node": "^0.2.1",
-    "lodash": "^3.0.1"
+    "lodash": "^3.2.0"
   },
   "devDependencies": {
     "code": "^1.3.0",
